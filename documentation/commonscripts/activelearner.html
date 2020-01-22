@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BioActive</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<header id="main-header">
+		<div class="container">
+			<h1>BioActive</h1>
+		</div>
+	</header>
+
+	<ul class="navbar">
+		<li><a href="../index.html">Home</a></li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Campaigns</a>
+			<div class="dropdown-content">
+				<a href="../campaigns/battleship.html">Battleship</a>
+				<a href="../campaigns/battleshipreal.html">BattleshipReal / Createplate</a>
+				<a href="../campaigns/clustercampaign.html">ClusterCampaign</a>
+				<a href="../campaigns/getdataimagecampaign.html">getDataImageCampaign</a>
+				<a href="../campaigns/linreg.html">LinReg</a>
+				<a href="../campaigns/multivars.html">MultiVars</a>
+			</div>
+		</li>
+		<li class="dropdown active">
+			<a href="javascript:void(0)" class="dropbtn">Common Scripts</a>
+			<div class="dropdown-content">
+				<a href="runcampaign.html">RunCampaign</a>
+				<a href="createcampaign.html">CreateCampaign</a>
+				<a href="activelearner.html" class="active">ActiveLearner</a>
+				<a href="modeler.html">Modeler</a>
+				<a href="database.html">Database</a>
+				<a href="goaltether.html">Goal Tether</a>
+				<a href="dataacquisition.html">Data Acquisition</a>
+			</div>
+		</li>
+		<li><a href="../contributors.html">Contributors</a></li>
+	</ul>
+
+	<section class="content-start">
+		<div class="container">
+			<h2>Active Learning Functions</h2>
+
+			<p>The purpose of the active learning functions provided in the BioActive project is to guide experimentation such that predictions with the least confidence mapping the experimental space are chosen in the next round of experimentation, thus ensuring that only experiments that add the most information to the model are conducted.</p>
+
+			<h2>Continous variable active learning functions</h2>
+
+			<p>Currently, there are 3 active learning functions for campaigns with continuous variables and they are generally alike. The difference between them, "actLearn_cont.py," "actLearn_multivars.py," and "actLearn_multivars_10Vars.py" is in the batch size so that larger experimental spaces may be interrogated in a fashion that is most appropriate for their size.</p>
+
+			<h2>Categorical variable active learning function</h2>
+
+			<p>The principle behind all active learning functions is the same so the differences between the continuous variable active learning functions and the categorical variable active learning functions are quite subtle, however, in the case of the categorical active learning function, "actLearn_cat.py" is better equipped for a series of confidences in which there is more heterogeneity as is the case with the clustering algorithm, "catModel11.py"</p>
+		</div>
+	</section>
+
+	<script src="../main.js"></script>
+</body>
+</html>
